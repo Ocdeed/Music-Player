@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Music Player</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="title-section">
+      <h1 class="app-title">Modern Music Player</h1>
+      <p class="app-subtitle">Your personal music experience</p>
+    </div>
+    <div class="container">
+      <main class="player">
+        <div class="artwork-container">
+          <img
+            id="cover"
+            src="images/default-cover.jpg"
+            alt="Album artwork"
+            class="artwork"
+          />
+        </div>
+
+        <div class="track-info">
+          <h1 id="title">Track Title</h1>
+          <p id="artist">Artist Name</p>
+        </div>
+
+        <div class="progress-container">
+          <span id="current-time">0:00</span>
+          <input type="range" id="seek-slider" min="0" max="100" value="0" />
+          <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+          <button id="shuffle" class="control-btn" aria-label="Shuffle">
+            <i class="fas fa-random"></i>
+          </button>
+          <button id="prev" class="control-btn" aria-label="Previous">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="control-btn play-btn" aria-label="Play">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="control-btn" aria-label="Next">
+            <i class="fas fa-forward"></i>
+          </button>
+          <button id="repeat" class="control-btn" aria-label="Repeat">
+            <i class="fas fa-redo"></i>
+          </button>
+        </div>
+
+        <div class="volume-container">
+          <button id="mute" class="control-btn" aria-label="Mute">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="100"
+            value="100"
+          />
+        </div>
+      </main>
+
+      <section class="playlist">
+        <h2>Playlist</h2>
+        <div id="tracks-container"></div>
+      </section>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <footer class="footer">
+      <p>
+        &copy; 2024 Modern Music Player. Created by
+        <a href="https://github.com/ocdeed" target="_blank">ocdeedcodes</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
